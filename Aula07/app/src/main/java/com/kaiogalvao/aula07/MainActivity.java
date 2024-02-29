@@ -33,5 +33,26 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
+/*
+    //Evento de Click via XML - lembre-se de definir o atributo onClick como a função 'notifyClick' abaixo
+
+    public void notifyClick(View view){
+        Button btn_enviar = findViewById(R.id.btn_enviar);
+        EditText txt_nome = findViewById(R.id.editTextText_nome);
+        EditText txt_sobrenome = findViewById(R.id.editTextText_sobrenome);
+        EditText txt_telefone = findViewById(R.id.editTextPhone_telefone);
+
+        String nome = String.valueOf(txt_nome.getText());
+        String sobrenome = String.valueOf(txt_sobrenome.getText());
+        String telefone = String.valueOf(txt_telefone.getText());
+
+        Toast.makeText(MainActivity.this, "Os dados coletados são:\n Nome completo: "+ nome +
+                " "+ sobrenome +"." + "\n Telefone: "+telefone+".", Toast.LENGTH_SHORT).show();
+
+    }
+*/
+
 }
