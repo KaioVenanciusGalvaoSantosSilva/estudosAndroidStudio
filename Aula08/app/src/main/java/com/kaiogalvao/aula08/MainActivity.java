@@ -1,9 +1,7 @@
 package com.kaiogalvao.aula08;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +37,4 @@ public class MainActivity extends AppCompatActivity {
         //Já é possivel armazenar os dados em um arquivo txt, em um banco de dados ou outro local.
 
     }
-
-
 }
