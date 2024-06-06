@@ -2,4 +2,5 @@
 
     <string name="condicional1">"        if (!valor.isEmpty()){\n        Toast.makeText(this, \"O valor digitado é: \"+valor, Toast.LENGTH_SHORT).show();\n        }"</string>
     <string name="condicional2"><![CDATA["        if (valor >= 6){\n            Toast.makeText(this, \"O aluno passou com nota: \"+valor, Toast.LENGTH_SHORT).show();\n        }else{\n\n            Toast.makeText(this, \"O aluno reprovou com nota: \"+valor, Toast.LENGTH_SHORT).show();\n        }"]]></string>
+    <string name="condicional3"><![CDATA["        if (valor >= 6){\n            Toast.makeText(this, \"O aluno passou com nota: \"+valor, Toast.LENGTH_SHORT).show();\n        }else if (valor >= 5.5){\n            Toast.makeText(this, \"Arredondar nota para 6, nota atual: \"+valor, Toast.LENGTH_SHORT).show();\n        }else{\n\n            Toast.makeText(this, \"O aluno reprovou com nota: \"+valor, Toast.LENGTH_SHORT).show();\n        }"]]></string>
 </resources>

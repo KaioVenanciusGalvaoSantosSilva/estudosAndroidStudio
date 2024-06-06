@@ -30,7 +30,7 @@ public class Caso2 extends AppCompatActivity {
 
         EditText numero = findViewById(R.id.txt_numero);
         double valor = Double.parseDouble(numero.getText().toString());
-        //Estrutura de decisão simples apenas com 1 if
+        //Estrutura de decisão com 1 if e else
         if (valor >= 6){
             Toast.makeText(this, "O aluno passou com nota: "+valor, Toast.LENGTH_SHORT).show();
         }else{
