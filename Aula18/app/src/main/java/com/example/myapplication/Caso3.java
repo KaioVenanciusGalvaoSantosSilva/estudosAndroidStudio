@@ -28,7 +28,7 @@ public class Caso3 extends AppCompatActivity {
 
     public void verificar_btn(View view){
 
-        EditText numero = findViewById(R.id.txt_numero);
+        EditText numero = findViewById(R.id.txt_cor);
         double valor = Double.parseDouble(numero.getText().toString());
         //Estrutura de decisão composta com 1 if-else-if
         if (valor >= 6){

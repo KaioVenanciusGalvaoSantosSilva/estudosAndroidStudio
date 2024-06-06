@@ -80,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/txt_numero"
+        android:id="@+id/txt_cor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_verificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="verificar_btn"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_numero"
+        app:layout_constraintTop_toBottomOf="@+id/txt_cor"
         app:layout_constraintVertical_bias="0.344" />
 
     <Button

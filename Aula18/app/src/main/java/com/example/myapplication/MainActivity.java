@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void verificar_btn(View view){
 
-        EditText numero = findViewById(R.id.txt_numero);
+        EditText numero = findViewById(R.id.txt_cor);
         String valor = String.valueOf(numero.getText());
         //Estrutura de decisão simples apenas com 1 if
         if (!valor.isEmpty()){

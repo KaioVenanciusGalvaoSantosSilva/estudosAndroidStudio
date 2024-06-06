@@ -28,7 +28,7 @@ public class Caso2 extends AppCompatActivity {
 
     public void verificar_btn(View view){
 
-        EditText numero = findViewById(R.id.txt_numero);
+        EditText numero = findViewById(R.id.txt_cor);
         double valor = Double.parseDouble(numero.getText().toString());
         //Estrutura de decisão com 1 if e else
         if (valor >= 6){
@@ -40,10 +40,9 @@ public class Caso2 extends AppCompatActivity {
     }
 
 
-
     public void caso1(View view){
-
-        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
     public void caso3(View view){
 
