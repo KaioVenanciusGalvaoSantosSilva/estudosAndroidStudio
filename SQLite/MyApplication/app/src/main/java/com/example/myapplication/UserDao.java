@@ -40,9 +40,11 @@ public class UserDao {
         if (cursor.moveToFirst()) {
             do {
                 User user = new User();
+
                 user.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 user.setName(cursor.getString(cursor.getColumnIndex("name")));
                 user.setEmail(cursor.getString(cursor.getColumnIndex("email")));
+
                 users.add(user);
             } while (cursor.moveToNext());
         }

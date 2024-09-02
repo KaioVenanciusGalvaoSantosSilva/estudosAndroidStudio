@@ -13,9 +13,8 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private UserDao userDao;
-    private EditText nameEditText, emailEditText;
+    private EditText nameEditText, emailEditText, idEditText;
     private TextView usersTextView;
-    private Button addButton, viewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,38 +24,38 @@ public class MainActivity extends AppCompatActivity {
         nameEditText = findViewById(R.id.nameEditText);
         emailEditText = findViewById(R.id.emailEditText);
         usersTextView = findViewById(R.id.usersTextView);
-        addButton = findViewById(R.id.addButton);
-        viewButton = findViewById(R.id.viewButton);
+        idEditText = findViewById(R.id.idEditText);
 
         userDao = new UserDao(this);
         userDao.open();
+    }
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String name = nameEditText.getText().toString();
-                String email = emailEditText.getText().toString();
-                User user = new User(0, name, email);
-                userDao.addUser(user);
-                nameEditText.setText("");
-                emailEditText.setText("");
-            }
-        });
+    public void addLista(View view){
+        String name = nameEditText.getText().toString();
+        String email = emailEditText.getText().toString();
+        User user = new User(0, name, email);
+        userDao.addUser(user);
+        nameEditText.setText("");
+        emailEditText.setText("");
+    }
 
-        viewButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                List<User> users = userDao.getAllUsers();
-                StringBuilder userList = new StringBuilder();
-                for (User user : users) {
-                    userList.append("ID: ").append(user.getId())
-                            .append(", Name: ").append(user.getName())
-                            .append(", Email: ").append(user.getEmail())
-                            .append("\n");
-                }
-                usersTextView.setText(userList.toString());
-            }
-        });
+    public void removeList(View view){
+        int id = Integer.parseInt(idEditText.getText().toString());
+        userDao.deleteUser(id);
+        idEditText.setText("");
+    }
+
+
+    public void verLista(View view){
+        List<User> users = userDao.getAllUsers();
+        StringBuilder userList = new StringBuilder();
+        for (User user : users) {
+            userList.append("ID: ").append(user.getId())
+                    .append(", Name: ").append(user.getName())
+                    .append(", Email: ").append(user.getEmail())
+                    .append("\n");
+        }
+        usersTextView.setText(userList.toString());
     }
 
     @Override
